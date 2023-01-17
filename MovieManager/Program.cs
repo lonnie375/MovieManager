@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using Microsoft.EntityFrameworkCore;
 using MovieManager.Data;
 using MovieManager.Services;
@@ -11,6 +12,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(x => x.UseSqlServer(builder.
 //Dependency INjection so we kow where to get the information for the object 
 builder.Services.AddScoped<IIMDBService, IMDBService>();
 
+=======
+﻿var builder = WebApplication.CreateBuilder(args);
+>>>>>>> main
 
 // Add services to the container.
 
@@ -19,6 +23,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+<<<<<<< HEAD
 // Address CORs
 builder.Services.AddCors(options =>
 {
@@ -28,6 +33,8 @@ builder.Services.AddCors(options =>
 }
 );
 
+=======
+>>>>>>> main
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -37,10 +44,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+<<<<<<< HEAD
 //Apply CORs 
 
 app.UseCors("LocalOriginsPolicy");
 
+=======
+>>>>>>> main
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
@@ -48,3 +58,7 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+<<<<<<< HEAD
+=======
+
+>>>>>>> main

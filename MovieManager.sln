@@ -1,9 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+<<<<<<< HEAD
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieManager", "MovieManager\MovieManager.csproj", "{6AF2B16D-8191-43DE-8BB7-350536E0F226}"
+=======
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1704.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieManager", "MovieManager\MovieManager.csproj", "{3E40F62C-20DF-4BF3-A5E9-EC4FE93A1388}"
+>>>>>>> main
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +18,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< HEAD
+		{6AF2B16D-8191-43DE-8BB7-350536E0F226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AF2B16D-8191-43DE-8BB7-350536E0F226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AF2B16D-8191-43DE-8BB7-350536E0F226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AF2B16D-8191-43DE-8BB7-350536E0F226}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
 		{3E40F62C-20DF-4BF3-A5E9-EC4FE93A1388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3E40F62C-20DF-4BF3-A5E9-EC4FE93A1388}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E40F62C-20DF-4BF3-A5E9-EC4FE93A1388}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E40F62C-20DF-4BF3-A5E9-EC4FE93A1388}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> main
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+<<<<<<< HEAD
+		SolutionGuid = {20ED7544-401E-463B-9468-5A81B30A3F36}
+=======
 		SolutionGuid = {436DCBA7-336A-48FB-A2FA-DAE272DA8752}
+>>>>>>> main
 	EndGlobalSection
 EndGlobal

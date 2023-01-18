@@ -1,35 +1,22 @@
-<<<<<<< HEAD
-﻿{
-=======
+
 {
->>>>>>> main
   "$schema": "https://json.schemastore.org/launchsettings.json",
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-<<<<<<< HEAD
-      "applicationUrl": "http://localhost:53719",
-      "sslPort": 44380
-=======
       "applicationUrl": "http://localhost:47539",
       "sslPort": 44368
->>>>>>> main
+
     }
   },
   "profiles": {
     "MovieManager": {
       "commandName": "Project",
-<<<<<<< HEAD
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
       "applicationUrl": "https://localhost:7245;http://localhost:5245",
-=======
-      "launchBrowser": true,
-      "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7292;http://localhost:5147",
->>>>>>> main
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -43,8 +30,5 @@
       }
     }
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> main
+

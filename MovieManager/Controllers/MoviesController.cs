@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using MovieManager.Data;
+﻿using MovieManager.Data;
 using MovieManager.Enums;
 using MovieManager.Models;
-using MovieManager.Services;
 using MovieManager.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
+
 
 namespace MovieManager.Controllers
 {

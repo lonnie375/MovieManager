@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "G0ni8DVNBXWsJ3ilpIN1+GdvYxrUmng+b+KCaNZ6ISoXEjRDivBC3Lufqug++dLFGrDCGVgHZkvEJ2t/AtCDIg==",
+  "success": true,
+  "projectFilePath": "/Users/lonni/Library/CloudStorage/OneDrive-Personal/SoftwareDev/MovieManager/MovieManager/MovieManager.csproj",
+  "expectedPackageFiles": [
+    "/Users/lonni/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/lonni/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/lonni/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/Users/lonni/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/Users/lonni/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/Users/lonni/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

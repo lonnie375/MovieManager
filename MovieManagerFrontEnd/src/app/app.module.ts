@@ -7,12 +7,14 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from '@auth0/auth0-angular';
 import { AuthButtonComponent } from './Auth-Button/auth-button/auth-button.component';
+import { MainComponent } from './Components/main/main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserProfileComponent,
     AuthButtonComponent,
+    MainComponent,
   ],
   imports: [
     BrowserModule, 

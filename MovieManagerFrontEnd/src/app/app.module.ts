@@ -21,9 +21,12 @@ import { AuthModule } from '@auth0/auth0-angular';
       //The domain and clientId were configured in the previous chapter 
       domain: 'dev-fssxdscxajvtly22.us.auth0.com',
       clientId: 'KfWPbRDJUGhWXUIdKX9THHIXWEOG1cal', 
+      authorizationParams: {
+        redirect_uri: window.location.origin
+      }
 
 
-    })
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

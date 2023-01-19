@@ -1,0 +1,10 @@
+.navigationyo{
+    background-color: rgb(92, 92, 105);
+}
+
+a.homelink{
+    color: rgb(231, 231, 0);
+    text-decoration: none;
+    font-weight: bold;
+    position: relative; left: 15px; top: 33px;
+}

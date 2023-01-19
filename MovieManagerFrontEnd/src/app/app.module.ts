@@ -8,6 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from '@auth0/auth0-angular';
 import { AuthButtonComponent } from './Auth-Button/auth-button/auth-button.component';
 import { MainComponent } from './Components/main/main.component';
+import { NavbarComponent } from './Components/navbar/navbar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; 
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { MainComponent } from './Components/main/main.component';
     UserProfileComponent,
     AuthButtonComponent,
     MainComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule, 
     HttpClientModule, 
     FormsModule, 
     AppRoutingModule, 
+    NgbModule,
     AuthModule.forRoot({
       //The domain and clientId were configured in the previous chapter 
       domain: 'dev-fssxdscxajvtly22.us.auth0.com',

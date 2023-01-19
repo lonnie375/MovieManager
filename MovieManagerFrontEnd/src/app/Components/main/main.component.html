@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+        <!-- if you are logged and have a username -->
+        <div *ngIf="userExists; else elseBlock">
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-center">
+                        <h1>MOVIE MENTION</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-6">
+                            <button [routerLink]="['/userMovieList']" class="frontpagebutton1"><span>YOUR MOVIES</span></button>
+                        </div>
+                        <div class="col-6">
+                            <button [routerLink]="['/searchMovie']" class="frontpagebutton2"><span>SEARCH MOVIES</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3"></div>
+    
+            </div>
+        </div>
+        <ng-template #elseBlock>
+            <p class="create">Please create username</p>
+            <form #CreateNewUser="ngForm"(ngSubmit)="AddNewUser(CreateNewUser.form)">
+            <div class="form-group">
+                <label class="CreateUser" for="userCreation"> </label>
+                <input type="text" class="form-control" name="userCreation" ngModel placeholder="UserName">
+            </div>
+            <button type="submit" class="searchbutton">Submit!</button>
+            </form>
+        </ng-template>  
+    
+      </ng-container>
+    
+      <ng-template #loggedOut>
+        <p class="signup">Please click log in button to sign up!</p>
+      </ng-template>
+    </div>

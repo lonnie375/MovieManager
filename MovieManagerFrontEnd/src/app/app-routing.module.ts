@@ -5,6 +5,7 @@ import { MainComponent } from './Components/main/main.component';
 
 const routes: Routes = [
   {path: "main", component: MainComponent}, 
+  {path: '', redirectTo: 'main', pathMatch: 'full'}
   
 ]
 

@@ -1,0 +1,33 @@
+<div class="container-fluid"> 
+    <div class="row">
+      <div class="col-12">
+          <div class="text-center">
+              <p>MOVIE MENTION</p>  
+          </div>
+      </div>
+  </div>
+      <form #searchThirdPartyForm="ngForm" (ngSubmit)="submitForm(searchThirdPartyForm.form)">
+          <div class="form-group">
+              <label class="searchtitle" for="movieSearch">Search a Movie Title</label>
+              <input type="text" class="form-control" name="movieSearch" ngModel>
+          </div>
+          <button type="submit" class="searchbutton">Search!</button>
+      </form>
+  </div>
+  <div *ngIf="movieAPI !== undefined">
+      <div class = "results">
+      <table class="table">
+          <thead>
+            <tr>
+              <th id="titles" scope="col">Title</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let result of movieAPI.results">
+              <td class="movies">{{result.title}}</td>
+              <button class="addmovie" (click)="AddMovieToUserList(result)">Add Movie</button>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+  </div>

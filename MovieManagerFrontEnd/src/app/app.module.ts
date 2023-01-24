@@ -9,7 +9,8 @@ import { AuthModule } from '@auth0/auth0-angular';
 import { AuthButtonComponent } from './Auth-Button/auth-button/auth-button.component';
 import { MainComponent } from './Components/main/main.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
-import { SearchMovieComponent } from './search-movie/search-movie.component';
+import { SearchMovieComponent } from './Components/search-movie/search-movie.component';
+
 
 
 @NgModule({

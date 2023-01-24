@@ -10,6 +10,7 @@ import { AuthButtonComponent } from './Auth-Button/auth-button/auth-button.compo
 import { MainComponent } from './Components/main/main.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { SearchMovieComponent } from './Components/search-movie/search-movie.component';
+import { UserMovieListComponent } from './Components/user-movie-list/user-movie-list.component';
 
 
 
@@ -21,6 +22,7 @@ import { SearchMovieComponent } from './Components/search-movie/search-movie.com
     MainComponent,
     NavbarComponent,
     SearchMovieComponent,
+    UserMovieListComponent,
   ],
   imports: [
     BrowserModule, 

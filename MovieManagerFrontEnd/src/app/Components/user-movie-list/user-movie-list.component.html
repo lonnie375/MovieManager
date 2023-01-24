@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="text-center">
+                <p class="yours">YOUR MOVIES</p>
+            </div>
+        </div>
+    </div>
+<div class="row">
+<div class="col-1"></div>
+    <div class="col-12">
+        <div class="row">
+            <div class="col-12" *ngFor="let userMovie of userMovieList ">
+                <div class="card">
+
+                    <div class="card-body">
+                    <h5 class="card-title">{{userMovie.title}}</h5>
+                    <p class="card-text">{{category[userMovie.category]}}</p>
+
+                        <div class="dropdown">
+                        <button class="category" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Update Category
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">                                   
+                                <li *ngFor="let userCategory of keys()">
+                                <a class="dropdown-item" (click)="UpdateCategory(userMovie.id, userCategory)">{{userCategory}}</a></li>
+                        </ul>
+                        </div>
+
+                    <button type="button" class="remove" (click)="DeleteMovieFromUserList(userMovie.id)">Remove Movie</button>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+<div class="col-2"></div>
+</div>

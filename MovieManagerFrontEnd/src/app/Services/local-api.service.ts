@@ -66,8 +66,7 @@ export class LocalAPIService {
 
   //Add new user 
   AddNewUser(user: User){
-    let newUser = this.client.post<User>(environment.apiUrl + "Movies/AddNewUser", user); 
-
+    let newUser = this.client.post<User>(environment.apiUrl + "/Movies/AddNewUser", user); 
     return newUser; 
   }
 
@@ -80,7 +79,7 @@ export class LocalAPIService {
 
   //Check For UserName 
   CheckForUserName() : Observable<boolean>{
-    let userNameExists = this.client.get<boolean>(environment.apiUrl + "Movies/CheckForUserName"); 
+    let userNameExists = this.client.get<boolean>(environment.apiUrl + "/Movies/CheckForUserName"); 
     return userNameExists; 
   }
 }

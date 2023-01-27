@@ -29,11 +29,13 @@
             <p class="create">Please create username</p>
             <form #CreateNewUser="ngForm"(ngSubmit)="AddNewUser(CreateNewUser.form)">
             <div class="form-group">
-                <label class="CreateUser" for="userCreation"> </label>
-                <input type="text" class="form-control" name="userCreation" ngModel placeholder="UserName">
+                <label class="CreateUser" for="userCreation"></label>
+                <input type="text" class="form-control" name="userCreation" ngModel>
             </div>
             <button type="submit" class="searchbutton">Submit!</button>
             </form>
+
+            {{CreateNewUser.value}}
         </ng-template>  
     
       </ng-container>

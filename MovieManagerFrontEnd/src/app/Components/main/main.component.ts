@@ -25,6 +25,6 @@ export class MainComponent implements OnInit {
   }
 
   AddNewUser(form:any){
-    this.service.AddNewUser({id:0, authId: "", userName: form.value["userCreation"]}).subscribe((data:User) => {this.newUser = data; window.location.reload()}); 
+    this.service.AddNewUser({id:0, authId: "", userName:form.value["userCreation"]}).subscribe((data:User) => {this.newUser = data; window.location.reload()}); 
   }
 }

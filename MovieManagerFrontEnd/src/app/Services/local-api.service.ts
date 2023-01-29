@@ -15,7 +15,7 @@ export class LocalAPIService {
 
   //Get all movies from user list
   GetAllMoviesFromUserList() : Observable<Movie[]>{
-    let movieList = this.client.get<Movie[]>(environment.apiUrl + "Movies/GetAllMoviesFromUserList");
+    let movieList = this.client.get<Movie[]>(environment.apiUrl + "/Movies/GetAllMoviesFromUserList");
 
     return movieList;
   }
@@ -51,7 +51,7 @@ export class LocalAPIService {
 
   //Add movie to user list 
   AddMovieToUserList(movie: Movie) : Observable<Movie>{
-    let userAddMovie = this.client.post<Movie>(environment.apiUrl + "Movies/AddMovieToUserList", movie);
+    let userAddMovie = this.client.post<Movie>(environment.apiUrl + "/Movies/AddMovieToUserList", movie);
 
     console.log("hello");
     return userAddMovie; 

@@ -36,7 +36,7 @@ import { environment } from 'src/environments/environment';
       domain: 'dev-fssxdscxajvtly22.us.auth0.com',
       clientId: 'KfWPbRDJUGhWXUIdKX9THHIXWEOG1cal', 
      
-      audience: 'https://dev-fssxdscxajvtly22.us.auth0.com/api/v2/', 
+      audience: 'https://movie-manager-api', 
 
       scope: 'read:current_user', 
 
@@ -45,13 +45,13 @@ import { environment } from 'src/environments/environment';
           {
             uri: 'http://localhost:4200', 
             tokenOptions: {
-              audience: 'https://dev-fssxdscxajvtly22.us.auth0.com/api/v2/'
+              audience: 'https://movie-manager-api'
             }
           }, 
           {
             uri: 'http://localhost:4200/api/*',
             tokenOptions: {
-              audience: 'https://dev-fssxdscxajvtly22.us.auth0.com/api/v2/',
+              audience: 'https://movie-manager-api',
             }
           }
         ]

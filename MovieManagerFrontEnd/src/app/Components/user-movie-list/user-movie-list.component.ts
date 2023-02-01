@@ -30,7 +30,7 @@ export class UserMovieListComponent implements OnInit {
   }
 
   GetAllMoviesFromUserList(){
-    this.service.GetAllMoviesFromUserList().subscribe((data: Movie[]) => this.userMovieList = data);
+    this.service.GetMoviesFromUserList().subscribe((data: Movie[]) => this.userMovieList = data);
    
   }
 

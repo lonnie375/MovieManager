@@ -14,29 +14,29 @@ export class LocalAPIService {
   constructor(private client:HttpClient) { }
 
   //Get all movies from user list
-  GetAllMoviesFromUserList() : Observable<Movie[]>{
-    let movieList = this.client.get<Movie[]>(environment.apiUrl + "Movies/GetAllMoviesFromUserList");
+  GetMoviesFromUserList() : Observable<Movie[]>{
+    let movieList = this.client.get<Movie[]>(environment.apiUrl + "/Movies/GetMoviesFromUserList");
 
     return movieList;
   }
 
   //Get random movie for user
   GetRandomMovieFromUserList(){
-    let randomMovie = this.client.get<Movie>(environment.apiUrl + "Movies/GetRandomMovieFromUserList");
+    let randomMovie = this.client.get<Movie>(environment.apiUrl + "/Movies/GetRandomMovieFromUserList");
 
     return randomMovie;
   }
 
   //Get movie list by category
   GetMoviesByCategoryFromUserList (category:number) : Observable<Movie[]>{
-    let categoryList = this.client.get<Movie[]>(environment.apiUrl + "Movies/GetMoviesByCategoryFromUserList");
+    let categoryList = this.client.get<Movie[]>(environment.apiUrl + "/Movies/GetMoviesByCategoryFromUserList");
 
     return categoryList;
   }
 
   //Get random movie from category
   GetRandomMovieByCategoryFromUserList (category:number){
-    let randomMovieByCategory = this.client.get<Movie>(environment.apiUrl + "Movies/GetRandomMovieByCategoryFromUserList");
+    let randomMovieByCategory = this.client.get<Movie>(environment.apiUrl + "/Movies/GetRandomMovieByCategoryFromUserList");
 
     return randomMovieByCategory;
   }
@@ -44,14 +44,14 @@ export class LocalAPIService {
 
   //Delete movie from movie list 
   DeleteMovieFromUserList(id:number){
-    let userDeleteMovie = this.client.delete<Movie>(environment.apiUrl + "Movies/DeleteMovieFromUserList?id=" + id); 
+    let userDeleteMovie = this.client.delete<Movie>(environment.apiUrl + "/Movies/DeleteMovieFromUserList?id=" + id); 
     
     return userDeleteMovie; 
   }
 
   //Add movie to user list 
   AddMovieToUserList(movie: Movie) : Observable<Movie>{
-    let userAddMovie = this.client.post<Movie>(environment.apiUrl + "Movies/AddMovieToUserList", movie);
+    let userAddMovie = this.client.post<Movie>(environment.apiUrl + "/Movies/AddMovieToUserList", movie);
 
     console.log("hello");
     return userAddMovie; 
@@ -59,7 +59,7 @@ export class LocalAPIService {
 
   //Get users name 
   GetUsername(user: string){
-    let userName = this.client.get<User>(environment.apiUrl + "Movies/GetUsername" + user); 
+    let userName = this.client.get<User>(environment.apiUrl + "/Movies/GetUsername" + user); 
 
     return userName;
   }

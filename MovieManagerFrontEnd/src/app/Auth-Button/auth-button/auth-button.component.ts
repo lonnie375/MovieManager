@@ -12,7 +12,7 @@ import { AuthService } from '@auth0/auth0-angular';
 </ng-container>
 
 <ng-template #loggedOut>
-  <button class="login" (click)="auth.loginWithRedirect()">Log in</button>
+  <button class="login" (click)="auth.loginWithRedirect()">Log In</button>
 </ng-template>
   `,
   styleUrls: ['./auth-button.component.css']

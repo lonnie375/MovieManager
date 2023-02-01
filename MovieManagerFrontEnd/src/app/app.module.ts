@@ -51,7 +51,19 @@ import { environment } from 'src/environments/environment';
           {
             uri: 'https://localhost:7245/api/Movies/CheckForUserName',
             tokenOptions: {
-              audience: 'https://movie-manager-api',
+              audience: 'https://movie-manager-api'
+            }
+          }, 
+          {
+            uri: 'https://localhost:7245/api/Movies/AddMovieToUserList', 
+            tokenOptions: {
+              audience: 'https://movie-manager-api'
+            }
+          }, 
+          {
+            uri: 'https://localhost:7245/api/Movies/GetMoviesFromUserList', 
+            tokenOptions: {
+              audience: 'https://movie-manager-api'
             }
           }
         ]

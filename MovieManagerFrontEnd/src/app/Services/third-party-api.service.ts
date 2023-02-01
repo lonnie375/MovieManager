@@ -12,7 +12,7 @@ export class ThirdPartyApiService {
   constructor(private client:HttpClient) { }
 
   SearchThirdParty(searchTerm:string) : Observable<MovieApi>{
-    let movieList = this.client.get<MovieApi>(environment.apiUrl + "Movies/SearchThirdParty?searchTerm=" + searchTerm); 
+    let movieList = this.client.get<MovieApi>(environment.apiUrl + "/Movies/SearchThirdParty?searchTerm=" + searchTerm); 
 
     return movieList; 
   }

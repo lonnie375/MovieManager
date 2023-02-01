@@ -10,7 +10,8 @@ const routes: Routes = [
   {path: "main", component: MainComponent}, 
   {path: '', redirectTo: 'main', pathMatch: 'full'}, 
   {path: "searchMovie", component:SearchMovieComponent, canActivate:[AuthGuard]},
-  {path: "userMovieList", component:UserMovieListComponent, canActivate:[AuthGuard]}
+  {path: "userMovieList", component:UserMovieListComponent, canActivate:[AuthGuard]}, 
+  //{path: "userMoviesByCategory", component:UserMoviesByCategoryComponent}
 ]
 
 

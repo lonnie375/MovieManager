@@ -20,6 +20,9 @@ export class UserMovieListComponent implements OnInit {
 
   role = Moviecategory; 
 
+  //New item to test
+  selectedCategory: string = '';
+
   keys() : Array<string>{
     var keys = Object.keys(this.role); 
     return keys.slice(keys.length / 2); 
@@ -27,6 +30,11 @@ export class UserMovieListComponent implements OnInit {
 
   ngOnInit(): void {
     this.GetAllMoviesFromUserList(); 
+  }
+
+  //New item to test
+  updateSelectedCategory(category: string) {
+    this.selectedCategory = category;
   }
 
   GetAllMoviesFromUserList(){

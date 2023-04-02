@@ -10,8 +10,8 @@ import { AuthButtonComponent } from './Auth-Button/auth-button/auth-button.compo
 import { MainComponent } from './Components/main/main.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { SearchMovieComponent } from './Components/search-movie/search-movie.component';
+import { NgXClickOutsideModule } from 'ngx-click-outside';
 import { UserMovieListComponent } from './Components/user-movie-list/user-movie-list.component';
-import { environment } from 'src/environments/environment';
 
 
 
@@ -30,6 +30,7 @@ import { environment } from 'src/environments/environment';
     HttpClientModule, 
     FormsModule, 
     AppRoutingModule, 
+    NgXClickOutsideModule,
     ReactiveFormsModule,
     AuthModule.forRoot({
       //The domain and clientId were configured in the previous chapter 

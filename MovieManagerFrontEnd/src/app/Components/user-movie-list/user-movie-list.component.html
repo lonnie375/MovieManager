@@ -17,6 +17,19 @@
                     <h5 class="card-title">{{userMovie.title}}</h5>
                     <p class="card-text">{{category[userMovie.category]}}</p>
 
+                    <!-- test code is going to be between these lines-->
+                    <div class="relative">
+                        <button type="button" class="py-2 px-4 font-semibold rounded-lg shadow-md text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-blue-300 focus:ring-4" (click)="toggleDropdown()">
+                          Update Category
+                        </button>
+                        <ul class="absolute mt-2 py-2 w-40 bg-white rounded-md shadow-lg z-10" *ngIf="dropdownOpen">
+                          <li *ngFor="let userCategory of keys()">
+                            <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" (click)="UpdateCategory(userMovie.id, userCategory)">{{userCategory}}</a>
+                          </li>
+                        </ul>
+                      </div>
+                    <!-- test code is going to be between-->
+
                         <div class="dropdown">
                         <button class="category" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         Update Category
@@ -40,41 +53,4 @@
 
 <!--Lets use Tailwind CSS Below to make this better-->
 
-<div class="container mx-auto">
-    <button
-      type="button"
-      class="bg-blue-500 text-white px-4 py-2 rounded"
-      @click="dropdownOpen = !dropdownOpen"
-    >
-      Select Category
-    </button>
   
-    <div
-      class="relative inline-block text-left"
-      (clickOutside)="dropdownOpen = false"
-    >
-      <div
-        class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
-        *ngIf="dropdownOpen"
-      >
-        <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-          <button
-            *ngFor="let key of keys()"
-            class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-            role="menuitem"
-            (click)="updateSelectedCategory(key)"
-          >
-            {{ key }}
-          </button>
-        </div>
-      </div>
-    </div>
-  
-    <p>
-      Selected Category: <strong>{{ selectedCategory }}</strong>
-    </p>
-  
-    <!-- Your other components and code -->
-  </div>
-  
-

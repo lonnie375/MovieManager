@@ -20,8 +20,15 @@ export class UserMovieListComponent implements OnInit {
 
   role = Moviecategory; 
 
-  //New item to test
-  selectedCategory: string = '';
+//testing items 
+
+dropdownOpen = false; 
+
+toggleDropdown(){
+  this.dropdownOpen = !this.dropdownOpen; 
+}
+//testing items
+
 
   keys() : Array<string>{
     var keys = Object.keys(this.role); 
@@ -32,10 +39,6 @@ export class UserMovieListComponent implements OnInit {
     this.GetAllMoviesFromUserList(); 
   }
 
-  //New item to test
-  updateSelectedCategory(category: string) {
-    this.selectedCategory = category;
-  }
 
   GetAllMoviesFromUserList(){
     this.service.GetMoviesFromUserList().subscribe((data: Movie[]) => this.userMovieList = data);

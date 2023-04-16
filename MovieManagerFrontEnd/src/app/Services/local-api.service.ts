@@ -72,7 +72,7 @@ export class LocalAPIService {
 
   //Update the users category on a movie
   UpdateCategory(id:number, category:Moviecategory){
-    let updatedCategory = this.client.put<Movie>(environment.apiUrl + "Movies/UpdateCategory?id=" + id + "&category=" + category, null);
+    let updatedCategory = this.client.put<Movie>(environment.apiUrl + "/Movies/UpdateCategory?id=" + id + "&category=" + category, null);
 
     return updatedCategory;
   }

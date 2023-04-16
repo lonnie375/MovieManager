@@ -21,7 +21,6 @@ export class UserMovieListComponent implements OnInit {
   role = Moviecategory; 
 
 //testing items 
-
 dropdownOpen = false; 
 
 toggleDropdown(){
@@ -48,7 +47,8 @@ toggleDropdown(){
   UpdateCategory(id: number, category: string){
     var test: Moviecategory = category as unknown as Moviecategory; 
     this.service.UpdateCategory(id, test).subscribe((data: Movie) => this.movie = data); 
-    location.reload();  
+    location.reload();
+   
   }
 
   DeleteMovieFromUserList(id:number){

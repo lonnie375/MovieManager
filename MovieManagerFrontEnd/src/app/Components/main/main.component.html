@@ -1,40 +1,28 @@
-<div class="container-fluid">
+<div class="container-fluid w-full mx-auto px-4">
     <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
-        <!-- if you are logged and have a username -->
+        <!-- if you are logged in and have a username -->
         <div *ngIf="userExists; else elseBlock">
-            <div class="flex flex-col-2 justify-center items-center space-x-28 mx-auto max-w-screen-xl px-4 md:px-6 py-72">
+            <div class="flex flex-col-2 justify-center space-x-28 mx-auto max-w-screen-xl px-4 md:px-6 py-56">
                 <button type="button" [routerLink]="['/userMovieList']" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">My Movies</button>
                 <button type="button" [routerLink]="['/searchMovie']"  class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Find New Movie</button>
             </div>
 
-            <!-- <div class="row">
-                <div class="col-3"></div>
-                <div class="col-6">
-                    <div class="row">
-                        <div class="col-6">
-                            <button [routerLink]="['/userMovieList']" class="frontpagebutton1"><span>YOUR MOVIES</span></button>
-                        </div>
-                        <div class="col-6">
-                            <button [routerLink]="['/searchMovie']" class="frontpagebutton2"><span>SEARCH MOVIES</span></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3"></div>
-    
-            </div> -->
         </div>
-        <ng-template #elseBlock>
-            <p class="create">Please create username</p>
-            <form #CreateNewUser="ngForm"(ngSubmit)="AddNewUser(CreateNewUser.form)">
-            <div class="form-group">
-                <label class="CreateUser" for="userCreation"></label>
-                <input type="text" class="form-control" name="userCreation" ngModel>
-            </div>
-            <button type="submit" class="searchbutton">Submit!</button>
-            </form>
-
-           
-        </ng-template>  
+        
+            <ng-template #elseBlock>
+                <div class="min-h-screen flex justify-center">
+                    <div class="text-center py-48">
+                        <p class="text-3xl font-semibold whitespace-nowrap dark:text-red-500 mb-3">Please create username</p>
+                        <form #CreateNewUser="ngForm"(ngSubmit)="AddNewUser(CreateNewUser.form)">
+                        <div class="form-group">
+                            <label class="CreateUser" for="userCreation"></label>
+                            <input type="text" class="form-control mb-3" name="userCreation" ngModel>
+                        </div>
+                        <button type="submit" class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2">Submit!</button>
+                        </form>
+                    </div>  
+                 </div>
+            </ng-template>  
     
       </ng-container>
     

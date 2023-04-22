@@ -6,9 +6,10 @@
 
     <div class="flex justify-center">
         <div class="w-full sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12">
+          <div class="movie-wrapper grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 mx-auto">
             <div class="grid grid-cols-3 gap-4" *ngFor="let userMovie of userMovieList">
-                <div class="bg-white rounded-lg shadow-lg">
-
+                <div class="bg-yellow-100 rounded-lg shadow-lg ">
+ 
                     <div class="px-6 py-4">
                     <h5 class="text-xl text-red-500 font-semibold mb-2">{{userMovie.title}}</h5>
                     <p class="text-yellow-700 text-base">{{category[userMovie.category]}}</p>
@@ -18,7 +19,7 @@
                         <button type="button" class="py-2 px-4 font-semibold rounded-lg shadow-md text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-blue-300 focus:ring-4" (click)="toggleDropdown()">
                           Update Category
                         </button>
-                        <ul class="absolute mt-2 py-2 w-40 bg-white rounded-md shadow-lg z-10" *ngIf="dropdownOpen">
+                        <ul class="absolute mt-2 py-2 w-40 rounded-md shadow-lg z-10" *ngIf="dropdownOpen">
                           <li *ngFor="let userCategory of keys()">
                             <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" (click)="UpdateCategory(userMovie.id, userCategory)">{{userCategory}}</a>
                           </li>
@@ -47,6 +48,7 @@
                     </div>
                 </div>
             </div>
+          </div>
         </div>
     </div>   
 <div class="col-2"></div>

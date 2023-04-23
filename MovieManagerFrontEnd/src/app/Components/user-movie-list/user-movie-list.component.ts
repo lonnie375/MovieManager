@@ -21,10 +21,14 @@ export class UserMovieListComponent implements OnInit {
   role = Moviecategory; 
 
 //testing items 
-dropdownOpen = false; 
+dropdownOpen: number | null = null; 
 
-toggleDropdown(){
-  this.dropdownOpen = !this.dropdownOpen; 
+toggleDropdown(movieId: number): void{
+  if (this.dropdownOpen === movieId) {
+    this.dropdownOpen = null;
+  } else {
+    this.dropdownOpen = movieId;
+  }
 }
 //testing items
 

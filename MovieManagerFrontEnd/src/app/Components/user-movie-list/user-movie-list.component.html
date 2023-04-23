@@ -7,23 +7,25 @@
     <div class="flex justify-center">
         <div class="w-full sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12">
           <div class="movie-wrapper grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 mx-auto">
-            <div class="grid grid-cols-3 gap-4" *ngFor="let userMovie of userMovieList">
-                <div class="bg-yellow-100 rounded-lg shadow-lg ">
+  
+                <div class="bg-blue-500 bg-opacity-50 rounded-lg shadow-lg" *ngFor="let userMovie of userMovieList">
  
                     <div class="px-6 py-4">
                     <h5 class="text-xl text-red-500 font-semibold mb-2">{{userMovie.title}}</h5>
-                    <p class="text-yellow-700 text-base">{{category[userMovie.category]}}</p>
+                    <p class="text-yellow-500 text-base">{{category[userMovie.category]}}</p>
 
                     <!-- test code is going to be between these lines-->
-                    <div class="relative mt-4">
-                        <button type="button" class="py-2 px-4 font-semibold rounded-lg shadow-md text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-blue-300 focus:ring-4" (click)="toggleDropdown()">
+                    <div class="flex justify-between mt-4">  
+                      <div class="relative">
+                        <button type="button" class="py-2 px-4 font-semibold rounded-lg shadow-md text-white bg-blue-500 hover:bg-blue-900 focus:outline-none focus:ring-red-400 focus:ring-4" (click)="toggleDropdown(userMovie.id)">
                           Update Category
                         </button>
-                        <ul class="absolute mt-2 py-2 w-40 rounded-md shadow-lg z-10" *ngIf="dropdownOpen">
+                        <ul class="absolute mt-2 py-2 w-40 rounded-md shadow-lg z-10 bg-blue-500" *ngIf="dropdownOpen === userMovie.id">
                           <li *ngFor="let userCategory of keys()">
-                            <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" (click)="UpdateCategory(userMovie.id, userCategory)">{{userCategory}}</a>
+                            <a class="block px-4 py-2 text-sm text-white-700 hover:bg-red-400 hover:text-gray-900" (click)="UpdateCategory(userMovie.id, userCategory)">{{userCategory}}</a>
                           </li>
                         </ul>
+                      </div>  
                         <button type="button" class="py-2 px-4 font-semibold rounded-lg shadow-md text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-blue-300 focus:ring-4" (click)="DeleteMovieFromUserList(userMovie.id)">Remove Movie</button>                    
 
                       </div>
@@ -47,12 +49,12 @@
                     <button type="button" class="remove" (click)="DeleteMovieFromUserList(userMovie.id)">Remove Movie</button>                     -->
                     </div>
                 </div>
-            </div>
+          </div>
           </div>
         </div>
-    </div>   
+
 <div class="col-2"></div>
 
-</div>
+
 
 

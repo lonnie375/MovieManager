@@ -22,11 +22,16 @@
           <thead>
             <tr>
               <th id="titles" scope="col">Title</th>
+              <th id="titles" scope="col">Image</th>
+              <th id="titles" scope="col">Description</th>
             </tr>
+       
           </thead>
           <tbody>
               <tr *ngFor="let result of movieAPI.results">
               <td class="movies">{{result.title}}</td>
+              <td class="movies"><img [src]="result.image" alt="Image" width="200" height="250"></td>
+              <td class="movies">{{result.description}}</td>
               <button class="addmovie" (click)="AddMovieToUserList(result)">Add Movie</button>
               </tr>
           </tbody>

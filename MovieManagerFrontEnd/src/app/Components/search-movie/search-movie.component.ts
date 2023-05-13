@@ -33,7 +33,7 @@ export class SearchMovieComponent implements OnInit {
 
     // Post this list then redirect 
 
-    this.ourService.AddMovieToUserList({imdbId : result.id, title : result.title, auth0Id : "", id : 0, category : Moviecategory.Action}).subscribe((data : Movie) => {this.movie = data; this._router.navigate(["/userMovieList"])}); 
+    this.ourService.AddMovieToUserList({imdbId : result.id,  title : result.title, auth0Id : "", id : 0, category : Moviecategory.Action}).subscribe((data : Movie) => {this.movie = data; this._router.navigate(["/userMovieList"])}); 
   }
   
 

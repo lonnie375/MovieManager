@@ -18,7 +18,22 @@
 
   <div *ngIf="movieAPI !== undefined">
       <div class = "results">
-      <table class="table">
+        <div class="flex justify-center">
+        <div class="w-full sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12">
+          <div class="movie-wrapper grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 mx-auto">
+            <div class="bg-blue-500 bg-opacity-50 rounded-lg shadow-lg flex flex-col justify-between items-center" *ngFor="let result of movieAPI.results">
+              <h5 class="text-xl text-red-500 font-semibold mb-2">{{result.title}}</h5>
+              <p class="text-yellow-500 text-base h-14">{{result.description}}</p>
+              <div *ngIf="result.image">
+                <img [src]="result.image" alt="poster" class="h-80 w-60">
+              </div>
+              <button class="py-2 px-4 mt-5 font-semibold rounded-lg shadow-md text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-blue-300 focus:ring-4" (click)="AddMovieToUserList(result)">Add Movie</button>
+            </div>
+          </div>
+        </div>
+
+
+      <!-- <table class="table">
           <thead>
             <tr>
               <th id="titles" scope="col">Title</th>
@@ -35,7 +50,8 @@
               <button class="addmovie" (click)="AddMovieToUserList(result)">Add Movie</button>
               </tr>
           </tbody>
-        </table>
+        </table> -->
+      </div>
       </div>
   </div>
 
